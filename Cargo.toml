@@ -1,9 +1,8 @@
-[package]
-name = "hello-world-yocto"
-version = "0.1.0"
-edition = "2021"
-repository = "git@github.com:Awarty/hello-world-yocto.git"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+[workspace]
+members = [
+  "device_service",
+  "passenger_information_service",
+  "libs/logger",
+  "libs/realtime_communication",
+  "libs/itxpt",
+]

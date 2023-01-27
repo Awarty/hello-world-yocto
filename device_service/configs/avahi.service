@@ -1,0 +1,16 @@
+<!--
+        Place this file in /etc/avahi/services/mqtt.service
+        And restart the avahi daemon, systemctl restart avahi-daemon.service, reload?
+
+        https://sosheskaz.github.io/tutorial/2016/09/26/Avahi-HTTP-Service.html
+-->
+
+<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+        <name replace-wildcards="yes">TMM-MQTT-Broker</name>
+        <service>
+                <type>_mqtt._tcp</type>
+                <port>1883</port>
+        </service>
+</service-group>

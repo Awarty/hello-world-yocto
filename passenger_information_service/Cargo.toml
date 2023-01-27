@@ -1,0 +1,34 @@
+[package]
+name = "passenger_information_service"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/Awarty/hello-world-yocto"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+logger = { path = "../libs/logger" }
+realtime_communication = { path = "../libs/realtime_communication" }
+itxpt = { path = "../libs/itxpt" }
+
+log = "0.4"
+tokio = { version = "1", features = ["full"] }
+warp = "0.3"
+serde = "1.0.152"
+serde_derive = "1.0.152"
+serde_json = "1.0.91"
+json = "0.12.4"
+anyhow = "1.0.65"
+chrono = { version = "0.4.11", features = ["serde"] }
+regex = "1.7.1"
+futures = { version = "0.3.*" }
+
+[dependencies.uuid]
+version = "1.2.2"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
+
