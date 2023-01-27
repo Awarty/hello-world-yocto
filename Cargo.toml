@@ -24,6 +24,7 @@ chrono = { version = "0.4.11", features = ["serde"] }
 regex = "1.7.1"
 futures = { version = "0.3.*" }
 openssl = { version = "0.10", features = ["vendored"] }
+openssl-sys = { version = "0.9.80", features = ["vendored"] }
 
 [dependencies.uuid]
 version = "1.2.2"
