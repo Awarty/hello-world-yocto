@@ -8,10 +8,10 @@ inherit cargo
 # how to get passenger_information_service could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/passenger_information_service/0.1.0"
 SRC_URI += "git://git@github.com/Awarty/hello-world-yocto.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "53d6f09617ab7e15232b13e908b578f960971781"
+SRCREV = "caec91e800bca5ee84a096292a2ff364468a9155"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+53d6f09617"
+PV:append = ".AUTOINC+caec91e800"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
