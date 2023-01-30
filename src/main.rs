@@ -1,12 +1,16 @@
-use std::env;
+use std::process;
+use std::{thread, time};
 
 fn main() {
-    if let Ok(v) = env::var("DEP_OPENSSL_VERSION_NUMBER") {
-        let version = u64::from_str_radix(&v, 16).unwrap();
-
-        if version >= 0x1_01_01_00_0 {
-            println!("cargo:rustc-cfg=openssl111");
+    let delay = time::Duration::from_secs(3);
+    let mut counter = 0;
+    loop{
+        println!("sleeping for 3  sec ");
+        thread::sleep(delay);
+        counter += 1;
+        if counter > 10 {
+            process::exit(0x0100);
         }
     }
-    println!("Hello World OpenSSL!");
 }
+
