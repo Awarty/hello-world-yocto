@@ -1,0 +1,9 @@
+prefix=/home/jacob/dev/testing/rust/rust-yocto-testing/hello-world-yocto/target/debug/build/openssl-sys-983a6b1f4a66e4ca/out/openssl-build/install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: OpenSSL
+Description: Secure Sockets Layer and cryptography libraries and tools
+Version: 1.1.1s
+Requires: libssl libcrypto
