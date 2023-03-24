@@ -8,14 +8,31 @@ inherit cargo
 # how to get hello-world-yocto could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/hello-world-yocto/0.1.0"
 SRC_URI += "git://git@github.com/Awarty/hello-world-yocto.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "45956f1b3981b0fee4f82ed155c5afe6915807f1"
+SRCREV = "e6f758ec81854f0959e8f37552e57d68b203c6f1"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+45956f1b39"
+PV:append = ".AUTOINC+e6f758ec81"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
 SRC_URI += " \
+    crate://crates.io/autocfg/1.1.0 \
+    crate://crates.io/bitflags/1.3.2 \
+    crate://crates.io/cc/1.0.79 \
+    crate://crates.io/cfg-if/1.0.0 \
+    crate://crates.io/foreign-types-shared/0.1.1 \
+    crate://crates.io/foreign-types/0.3.2 \
+    crate://crates.io/libc/0.2.140 \
+    crate://crates.io/once_cell/1.17.1 \
+    crate://crates.io/openssl-macros/0.1.0 \
+    crate://crates.io/openssl-sys/0.9.83 \
+    crate://crates.io/openssl/0.10.48 \
+    crate://crates.io/pkg-config/0.3.26 \
+    crate://crates.io/proc-macro2/1.0.53 \
+    crate://crates.io/quote/1.0.26 \
+    crate://crates.io/syn/1.0.109 \
+    crate://crates.io/unicode-ident/1.0.8 \
+    crate://crates.io/vcpkg/0.2.15 \
 "
 
 
