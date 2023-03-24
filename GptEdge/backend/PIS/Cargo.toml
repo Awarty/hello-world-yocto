@@ -7,7 +7,7 @@ repository = "https://github.com/Awarty/hello-world-yocto"
 
 [dependencies]
 openssl = { version = "0.10", features = ["vendored"] }
-openssl-sys = "0.9.83"
+openssl-sys = { version = "0.9.83", features = ["vendored"] }
 log = "0.4"
 tokio = { version = "1", features = ["full"] }
 warp = "0.3"

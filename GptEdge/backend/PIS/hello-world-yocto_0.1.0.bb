@@ -8,10 +8,10 @@ inherit cargo
 # how to get hello-world-yocto could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/hello-world-yocto/0.1.0"
 SRC_URI += "git://git@github.com/Awarty/hello-world-yocto.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "4f40ea5f913beb600ff6c2eabb65d9a9c4a0b456"
+SRCREV = "ca80e916492160d60eeb450888f00bb4a998ae2f"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+4f40ea5f91"
+PV:append = ".AUTOINC+ca80e91649"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
