@@ -8,10 +8,10 @@ inherit cargo
 # how to get hello-world-yocto could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/hello-world-yocto/0.1.0"
 SRC_URI += "git://git@github.com/Awarty/hello-world-yocto.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "c970ae3a31f89b6131f39926537c6a19913505a2"
+SRCREV = "ff7db057d24d03602cdc690739570b3511652244"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+c970ae3a31"
+PV:append = ".AUTOINC+ff7db057d2"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
@@ -43,6 +43,8 @@ SRC_URI += " \
     crate://crates.io/errno/0.2.8 \
     crate://crates.io/fastrand/1.9.0 \
     crate://crates.io/fnv/1.0.7 \
+    crate://crates.io/foreign-types-shared/0.1.1 \
+    crate://crates.io/foreign-types/0.3.2 \
     crate://crates.io/form_urlencoded/1.1.0 \
     crate://crates.io/futures-channel/0.3.27 \
     crate://crates.io/futures-core/0.3.27 \
@@ -89,6 +91,9 @@ SRC_URI += " \
     crate://crates.io/num-traits/0.2.15 \
     crate://crates.io/num_cpus/1.15.0 \
     crate://crates.io/once_cell/1.17.1 \
+    crate://crates.io/openssl-macros/0.1.0 \
+    crate://crates.io/openssl-sys/0.9.83 \
+    crate://crates.io/openssl/0.10.48 \
     crate://crates.io/parking_lot/0.12.1 \
     crate://crates.io/parking_lot_core/0.9.7 \
     crate://crates.io/percent-encoding/2.2.0 \
@@ -96,6 +101,7 @@ SRC_URI += " \
     crate://crates.io/pin-project-lite/0.2.9 \
     crate://crates.io/pin-project/1.0.12 \
     crate://crates.io/pin-utils/0.1.0 \
+    crate://crates.io/pkg-config/0.3.26 \
     crate://crates.io/ppv-lite86/0.2.17 \
     crate://crates.io/proc-macro2/1.0.54 \
     crate://crates.io/quick-error/1.2.3 \
@@ -151,6 +157,7 @@ SRC_URI += " \
     crate://crates.io/utf-8/0.7.6 \
     crate://crates.io/uuid-macro-internal/1.3.0 \
     crate://crates.io/uuid/1.3.0 \
+    crate://crates.io/vcpkg/0.2.15 \
     crate://crates.io/version_check/0.9.4 \
     crate://crates.io/want/0.3.0 \
     crate://crates.io/warp/0.3.3 \
