@@ -6,6 +6,9 @@ repository = "https://github.com/Awarty/hello-world-yocto"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+#openssl = { version = "0.10", features = ["vendored"] }
+#openssl-sys = { version = "0.9.83", features = ["vendored"] }
+openssl = "0.10"
 log = "0.4"
 tokio = { version = "1", features = ["full"] }
 warp = "0.3"
