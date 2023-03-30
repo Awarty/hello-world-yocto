@@ -8,16 +8,17 @@ inherit cargo
 # how to get hello-world-yocto could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/hello-world-yocto/0.1.0"
 SRC_URI += "git://git@github.com/Awarty/hello-world-yocto.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "c30e1f967c0e4efcf6da8c289090522e1722bbb6"
+SRCREV = "b78b7798108b56eae9c683f3fde6f3c99d91bfd1"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+c30e1f967c"
+PV:append = ".AUTOINC+b78b779810"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
 SRC_URI += " \
     crate://crates.io/android_system_properties/0.1.5 \
     crate://crates.io/anyhow/1.0.70 \
+    crate://crates.io/async-channel/1.8.0 \
     crate://crates.io/async-trait/0.1.68 \
     crate://crates.io/autocfg/1.1.0 \
     crate://crates.io/base64/0.13.1 \
@@ -30,9 +31,13 @@ SRC_URI += " \
     crate://crates.io/cc/1.0.79 \
     crate://crates.io/cfg-if/1.0.0 \
     crate://crates.io/chrono/0.4.24 \
+    crate://crates.io/cmake/0.1.50 \
     crate://crates.io/codespan-reporting/0.11.1 \
+    crate://crates.io/concurrent-queue/2.1.0 \
     crate://crates.io/core-foundation-sys/0.8.3 \
     crate://crates.io/cpufeatures/0.2.6 \
+    crate://crates.io/crossbeam-channel/0.5.7 \
+    crate://crates.io/crossbeam-utils/0.8.15 \
     crate://crates.io/crypto-common/0.1.6 \
     crate://crates.io/cxx-build/1.0.94 \
     crate://crates.io/cxx/1.0.94 \
@@ -41,10 +46,9 @@ SRC_URI += " \
     crate://crates.io/digest/0.10.6 \
     crate://crates.io/errno-dragonfly/0.1.2 \
     crate://crates.io/errno/0.2.8 \
+    crate://crates.io/event-listener/2.5.3 \
     crate://crates.io/fastrand/1.9.0 \
     crate://crates.io/fnv/1.0.7 \
-    crate://crates.io/foreign-types-shared/0.1.1 \
-    crate://crates.io/foreign-types/0.3.2 \
     crate://crates.io/form_urlencoded/1.1.0 \
     crate://crates.io/futures-channel/0.3.27 \
     crate://crates.io/futures-core/0.3.27 \
@@ -53,6 +57,7 @@ SRC_URI += " \
     crate://crates.io/futures-macro/0.3.27 \
     crate://crates.io/futures-sink/0.3.27 \
     crate://crates.io/futures-task/0.3.27 \
+    crate://crates.io/futures-timer/3.0.2 \
     crate://crates.io/futures-util/0.3.27 \
     crate://crates.io/futures/0.3.27 \
     crate://crates.io/generic-array/0.14.7 \
@@ -91,9 +96,10 @@ SRC_URI += " \
     crate://crates.io/num-traits/0.2.15 \
     crate://crates.io/num_cpus/1.15.0 \
     crate://crates.io/once_cell/1.17.1 \
-    crate://crates.io/openssl-macros/0.1.0 \
+    crate://crates.io/openssl-src/111.25.2+1.1.1t \
     crate://crates.io/openssl-sys/0.9.83 \
-    crate://crates.io/openssl/0.10.48 \
+    crate://crates.io/paho-mqtt-sys/0.8.1 \
+    crate://crates.io/paho-mqtt/0.12.1 \
     crate://crates.io/parking_lot/0.12.1 \
     crate://crates.io/parking_lot_core/0.9.7 \
     crate://crates.io/percent-encoding/2.2.0 \

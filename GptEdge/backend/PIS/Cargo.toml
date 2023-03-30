@@ -8,7 +8,10 @@ repository = "https://github.com/Awarty/hello-world-yocto"
 [dependencies]
 #openssl = { version = "0.10", features = ["vendored"] }
 #openssl-sys = { version = "0.9.83", features = ["vendored"] }
-paho-mqtt = { version = "0.12", features = ["vendored-ssl"] }
+
+#paho-mqtt = { version = "0.12", features = ["vendored-ssl"] }
+ipaho-mqtt = { version = "0.12" }
+
 #openssl = "0.10"
 #openssl-sys = "0.9.83"
 log = "0.4"
