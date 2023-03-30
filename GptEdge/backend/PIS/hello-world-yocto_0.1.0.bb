@@ -8,10 +8,10 @@ inherit cargo
 # how to get hello-world-yocto could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/hello-world-yocto/0.1.0"
 SRC_URI += "git://git@github.com/Awarty/hello-world-yocto.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "e054f240218c7471a33933c70a300847deb01508"
+SRCREV = "b26f9ba1d6c95cc1be77398e06c63334ff976de5"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+e054f24021"
+PV:append = ".AUTOINC+b26f9ba1d6"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
@@ -49,6 +49,8 @@ SRC_URI += " \
     crate://crates.io/event-listener/2.5.3 \
     crate://crates.io/fastrand/1.9.0 \
     crate://crates.io/fnv/1.0.7 \
+    crate://crates.io/foreign-types-shared/0.1.1 \
+    crate://crates.io/foreign-types/0.3.2 \
     crate://crates.io/form_urlencoded/1.1.0 \
     crate://crates.io/futures-channel/0.3.27 \
     crate://crates.io/futures-core/0.3.27 \
@@ -96,8 +98,10 @@ SRC_URI += " \
     crate://crates.io/num-traits/0.2.15 \
     crate://crates.io/num_cpus/1.15.0 \
     crate://crates.io/once_cell/1.17.1 \
+    crate://crates.io/openssl-macros/0.1.0 \
     crate://crates.io/openssl-src/111.25.2+1.1.1t \
     crate://crates.io/openssl-sys/0.9.83 \
+    crate://crates.io/openssl/0.10.48 \
     crate://crates.io/paho-mqtt-sys/0.8.1 \
     crate://crates.io/paho-mqtt/0.12.1 \
     crate://crates.io/parking_lot/0.12.1 \
